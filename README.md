@@ -30,11 +30,11 @@
 
 | Komponen | Spesifikasi minimal |
 |----------|---------------------|
-|Sistem Operasi|Ubuntu 20.04|
+|Sistem Operasi|Ubuntu 22|
 
 | Komponen | Spesifikasi rekomendasi |
 |----------|---------------------|
-|Sistem Operasi|Ubuntu 20.04 atau lebih tinggi|
+|Sistem Operasi|Ubuntu 22 atau lebih tinggi|
 
 <p align="center">
   <img height="auto" width="auto" src="https://user-images.githubusercontent.com/38981255/202432162-68e7828e-e917-4636-83a4-5c7969356313.png">
