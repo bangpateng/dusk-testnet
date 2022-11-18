@@ -182,7 +182,7 @@ service dusk start
 
 Jika Tidak Terjadi Apa Apa Berarti Sudah Benar
 
-## Check Log Rusk dan Dusk (Untuk Memastikan Jalan Dengan Baik)
+## 9. Check Log Rusk dan Dusk (Untuk Memastikan Jalan Dengan Baik)
 
 
 ### Cek log rusk
@@ -203,4 +203,73 @@ tail -f /var/log/rusk.log
 
 ```
 tail -f /var/log/dusk.log
+```
+
+
+## 10. Stake Token
+
+<p align="center">
+  <img height="auto" width="auto" src="https://user-images.githubusercontent.com/38981255/202719383-9e0c6c50-157a-4cdb-a2ee-6b55cc9c26f5.JPG">
+</p>
+
+```
+cd
+cd rusk-wallet0.12.0-linux-x64
+./rusk-wallet
+```
+
+- Pilih `Acces Wallet` dan `Enter`
+- Masukan Password Kalian dan `Enter`
+- Lalu `Enter` lagi
+- Arah Bawah Pilih `Stake Dusk` 
+- Introduce the amount of DUSK to stake: isi `25000` dan `Enter`
+- Introduce the gas limit for this transaction: isi `2000000000 dan `Enter`
+- Introduce the gas price for this transaction: Biarkan Bawaan Langsung `Enter` Aja
+- Ketik `y` dan `Enter`
+- Done
+
+## 11. Check Staking Udah Apa Belum
+
+<p align="center">
+  <img height="auto" width="auto" src="https://user-images.githubusercontent.com/38981255/202719371-a190234a-6fa5-4174-b8c9-1918c0ebbd3a.JPG">
+</p>
+
+```
+./rusk-wallet
+```
+
+- Pilih `Acces Wallet` dan `Enter`
+- Masukan Password Kalian dan `Enter`
+- Lalu `Enter` lagi
+- Arah Bawah Pilih `Check existing stake` dan `Enter`
+- Done
+
+## 12. Perintah Berguna Lainnya
+
+## Menjalankan service
+
+### Menjalankan service rusk
+
+```
+service rusk start
+```
+
+### Menjalankan service dusk
+
+```
+service dusk start
+```
+
+## Menghentikan service
+
+### Menghentikan service rusk
+
+```
+service rusk stop
+```
+
+### Menghentikan service dusk
+
+```
+service dusk stop
 ```
