@@ -114,4 +114,58 @@ cd rusk-wallet0.12.0-linux-x64
 - Alamat Hadiah, Isi Address ETH Metamask (Ini Untuk Menerima Reward Hadiah Testnet nya Nanti)
 - Submit Form
 
-Waiting Tutor Lanjut Kalo Saldo Faucet Udah Landing
+## 4. Install Rusk-Node
+
+- Buka Vps kalian
+- Untuk Memastikan Apakah Balance Faucet Udah Landing, Jalankan Perintah di Bawah :
+
+```
+cd rusk-wallet0.12.0-linux-x64
+./rusk-wallet
+```
+
+- Arah Bawah Pilih `Replace your wallet with a lost one using the recovery phrase` dan `enter`
+- Masukan Pharse Wallet kalian `Enter`
+- Masukan Password Anda 2x dan `Enter`
+- Balik ke VPS Arah Bawah Pilih `Back` dan `Enter`
+- Arah Bawah Lagi Pilih `Exit` dan `Enter`
+
+## 5. Instal Rusk-Node
+
+```
+cd
+curl --proto '=https' --tlsv1.2 -sSf https://dusk-infra.ams3.digitaloceanspaces.com/rusk/itn-installer.sh | sh
+```
+
+## 6. Buka Port (Untuk Pengguna Azure sama DO biasanya Buka Port di Website Dasboard VPS Kalian) kalo Contabo Langsung Paste aja di Vps Kalian
+
+```
+sudo ufw allow 22
+sudo ufw allow 9000:9005/udp
+sudo ufw enable
+```
+
+## 7. Set password `consensus.keys` Jalankan
+
+```
+cd /root/.dusk/rusk-wallet
+mv *.key /opt/dusk/conf/consensus.keys
+
+## 8. Set Password Consensus.keys
+
+```
+echo 'DUSK_CONSENSUS_KEYS_PASS=<MASUKAN-PASWWORD-KALIAN>' > /opt/dusk/services/dusk.conf
+```
+  
+`<MASUKAN-PASWWORD-KALIAN>` = Isi Dengan Password Kalian, Samain Aja Kaya Yang Pas Awal Buat Wallet
+
+## Start Node
+
+```
+service rusk start
+service dusk start
+```
+
+Jika Tidak Terjadi Apa Apa Berarti Sudah Benar
+
+## 
