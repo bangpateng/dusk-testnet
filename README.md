@@ -52,7 +52,9 @@ sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
 ## 1. Instal CLI
 
 ```
-sudo apt-get update && sudo apt install libssl-dev
+sudo apt-get update
+sudo apt install libssl-dev
+sudo apt-get install -y tar wget curl
 ```
 ```
 wget -q https://github.com/dusk-network/wallet-cli/releases/download/v0.12.0/ruskwallet0.12.0-linux-x64.tar.gz
