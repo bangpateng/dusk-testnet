@@ -112,9 +112,9 @@ cd rusk-wallet0.12.0-linux-x64
 - Paste Address Dusk kalian
 - Upload File.cpk kalian 
 - Alamat Hadiah, Isi Address ETH Metamask (Ini Untuk Menerima Reward Hadiah Testnet nya Nanti)
-- Submit Form
+- Submit Form dan Tunggu Keesokan Harinya
 
-## 4. Install Rusk-Node
+## 4. Memastikan Faucet Sudah Landing
 
 - Buka Vps kalian
 - Untuk Memastikan Apakah Balance Faucet Udah Landing, Jalankan Perintah di Bawah :
@@ -132,12 +132,20 @@ cd rusk-wallet0.12.0-linux-x64
 
 ## 5. Instal Rusk-Node
 
+<p align="center">
+  <img height="auto" width="auto" src="https://user-images.githubusercontent.com/38981255/202716202-a9687681-6daa-4a5f-b1d7-299f0d72e2f7.JPG">
+</p>
+
 ```
 cd
 curl --proto '=https' --tlsv1.2 -sSf https://dusk-infra.ams3.digitaloceanspaces.com/rusk/itn-installer.sh | sh
 ```
 
 ## 6. Buka Port (Untuk Pengguna Azure sama DO biasanya Buka Port di Website Dasboard VPS Kalian) kalo Contabo Langsung Paste aja di Vps Kalian
+
+<p align="center">
+  <img height="auto" width="auto" src="https://user-images.githubusercontent.com/38981255/202716199-ff3752f6-76a4-4cab-965b-3a13b7f12623.jpg">
+</p>
 
 ```
 sudo ufw allow 22
@@ -147,19 +155,25 @@ sudo ufw enable
 
 ## 7. Set password `consensus.keys` Jalankan
 
+<p align="center">
+  <img height="auto" width="auto" src="https://user-images.githubusercontent.com/38981255/202716195-647652a1-e758-477a-850e-7c002a0102f9.jpg">
+</p>
+
 ```
 cd /root/.dusk/rusk-wallet
 mv *.key /opt/dusk/conf/consensus.keys
-
-## 8. Set Password Consensus.keys
-
+```
 ```
 echo 'DUSK_CONSENSUS_KEYS_PASS=<MASUKAN-PASWWORD-KALIAN>' > /opt/dusk/services/dusk.conf
 ```
   
 `<MASUKAN-PASWWORD-KALIAN>` = Isi Dengan Password Kalian, Samain Aja Kaya Yang Pas Awal Buat Wallet
 
-## Start Node
+## 8. Start Node
+
+<p align="center">
+  <img height="auto" width="auto" src="https://user-images.githubusercontent.com/38981255/202716190-b364ac77-2424-4693-b7af-37157cc9a2e9.jpg">
+</p>
 
 ```
 service rusk start
@@ -168,4 +182,25 @@ service dusk start
 
 Jika Tidak Terjadi Apa Apa Berarti Sudah Benar
 
-## 
+## Check Log Rusk dan Dusk (Untuk Memastikan Jalan Dengan Baik)
+
+
+### Cek log rusk
+
+<p align="center">
+  <img height="auto" width="auto" src="https://user-images.githubusercontent.com/38981255/202716183-094af1f4-eab6-4f95-a021-45ed26c4406d.jpg">
+</p>
+
+```
+tail -f /var/log/rusk.log
+```
+
+### Cek log dusk
+
+<p align="center">
+  <img height="auto" width="auto" src="https://user-images.githubusercontent.com/38981255/202716177-8a814b33-8205-40ef-a4be-0fe6ee9d997c.jpg">
+</p>
+
+```
+tail -f /var/log/dusk.log
+```
