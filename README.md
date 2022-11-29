@@ -273,3 +273,18 @@ service rusk stop
 ```
 service dusk stop
 ```
+
+### Hapus Node 
+
+```
+sudo service rusk stop
+sudo systemctl disable rusk
+sudo service dusk stop
+sudo systemctl disbale dusk
+sudo rm /etc/systemd/system/rusk* -rf
+sudo rm /etc/systemd/system/dusk* -rf
+sudo rm -rf /opt/dusk/
+rm -rf /var/log/dusk.log
+rm -rf /var/log/rusk.log
+rm -rf rusk-wallet0.12.0-linux-x64
+```
