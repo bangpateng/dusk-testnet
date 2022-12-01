@@ -140,6 +140,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://dusk-infra.ams3.digitaloceanspaces.
 
 ```
 sudo ufw allow 22
+sudo ufw allow 8585
 sudo ufw allow 9000:9005/udp
 sudo ufw enable
 ```
