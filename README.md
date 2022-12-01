@@ -111,8 +111,8 @@ cd rusk-wallet0.13.0-linux-x64-libssl3
 - Untuk Memastikan Apakah Balance Faucet Udah Landing, Jalankan Perintah di Bawah :
 
 ```
-cd rusk-wallet0.12.0-linux-x64
-./rusk-wallet
+cd rusk-wallet0.13.0-linux-x64-libssl3
+./rusk-wallet --state http://127.0.0.1:8585
 ```
 
 - Arah Bawah Pilih `Replace your wallet with a lost one using the recovery phrase` dan `enter`
@@ -205,8 +205,8 @@ tail -f /var/log/dusk.log
 
 ```
 cd
-cd rusk-wallet0.12.0-linux-x64
-./rusk-wallet
+cd rusk-wallet0.13.0-linux-x64-libssl3
+./rusk-wallet --state http://127.0.0.1:8585
 ```
 
 - Pilih `Acces Wallet` dan `Enter`
@@ -226,7 +226,7 @@ cd rusk-wallet0.12.0-linux-x64
 </p>
 
 ```
-./rusk-wallet
+./rusk-wallet --state http://127.0.0.1:8585
 ```
 
 - Pilih `Acces Wallet` dan `Enter`
@@ -277,5 +277,5 @@ sudo rm /etc/systemd/system/dusk* -rf
 sudo rm -rf /opt/dusk/
 rm -rf /var/log/dusk.log
 rm -rf /var/log/rusk.log
-rm -rf rusk-wallet0.12.0-linux-x64
+rm -rf rusk-wallet0.13.0-linux-x64-libssl3
 ```
